@@ -6,8 +6,6 @@ import './Footer.css'; // Import the new CSS file
 
 const Footer = () => {
     const videoRef1 = useRef(null);
-    const videoRef2 = useRef(null);
-    const videoRef3 = useRef(null);
     const location = useLocation();
 
     const handleLinkClick = (path) => {
@@ -35,14 +33,12 @@ const Footer = () => {
 
     useEffect(() => {
         const v1 = videoRef1.current;
-        const v2 = videoRef2.current;
-        const v3 = videoRef3.current;
 
         const setRate = (v) => {
             if (v) v.playbackRate = 2.5;
         };
 
-        [v1, v2, v3].forEach(setRate);
+        [v1].forEach(setRate);
     }, []);
 
     // Close modal and scroll to top on route change
@@ -57,9 +53,8 @@ const Footer = () => {
             <div className="footer-inner">
                 <div className="footer-brand-wrapper">
                     <Link to="/" className="footer-brand-logo" onClick={() => handleLinkClick('/')}>
-                        {/* Segment 1: Neu */}
-                        <div className="logo-mask logo-mask-neu">
-                            <span className="logo-sizer" aria-hidden="true">Neu</span>
+                        <div className="logo-mask logo-mask-full">
+                            <span className="logo-sizer" aria-hidden="true">NeuZenAI</span>
                             <video
                                 ref={videoRef1}
                                 className="masked-video"
@@ -69,43 +64,9 @@ const Footer = () => {
                                 playsInline
                                 preload="metadata"
                             >
-                                <source src="/sp-logo-footer-bg.mp4?v=1" type="video/mp4" />
+                                <source src="/sp-logo-footer-bg.mp4" type="video/mp4" />
                             </video>
-                            <span className="logo-fallback">Neu</span>
-                        </div>
-
-                        {/* Segment 2: Zen */}
-                        <div className="logo-mask logo-mask-zen">
-                            <span className="logo-sizer" aria-hidden="true">Zen</span>
-                            <video
-                                ref={videoRef2}
-                                className="masked-video"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                preload="metadata"
-                            >
-                                <source src="/sp-logo-footer-bg.mp4?v=2" type="video/mp4" />
-                            </video>
-                            <span className="logo-fallback">Zen</span>
-                        </div>
-
-                        {/* Segment 3: AI */}
-                        <div className="logo-mask logo-mask-ai">
-                            <span className="logo-sizer" aria-hidden="true">AI</span>
-                            <video
-                                ref={videoRef3}
-                                className="masked-video"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                preload="metadata"
-                            >
-                                <source src="/sp-logo-footer-bg.mp4?v=3" type="video/mp4" />
-                            </video>
-                            <span className="logo-fallback">AI</span>
+                            <span className="logo-fallback">NeuZenAI</span>
                         </div>
                     </Link>
                 </div>

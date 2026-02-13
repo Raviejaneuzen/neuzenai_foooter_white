@@ -5,9 +5,11 @@
     color: #18181b;
     position: relative;
     z-index: 10;
-    border-top: 1px solid #e5e7eb;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
+    border-top: 30px solid #ff4500;
+    border-left: 30px solid #ff4500;
+    border-right: 30px solid #ff4500;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
     margin-top: 60px;
 }
 
@@ -76,16 +78,8 @@
         height: 140px;
     }
 
-    .logo-mask-neu {
-        width: 280px;
-    }
-
-    .logo-mask-zen {
-        width: 250px;
-    }
-
-    .logo-mask-ai {
-        width: 180px;
+    .logo-mask-full {
+        width: 650px;
     }
 
     .logo-sizer,
@@ -141,22 +135,10 @@
 
 
 
-.logo-mask-neu {
-    width: 350px;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeu%3C/text%3E%3C/svg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeu%3C/text%3E%3C/svg%3E");
-}
-
-.logo-mask-zen {
-    width: 320px;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3EZen%3C/text%3E%3C/svg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3EZen%3C/text%3E%3C/svg%3E");
-}
-
-.logo-mask-ai {
-    width: 220px;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3EAI%3C/text%3E%3C/svg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3EAI%3C/text%3E%3C/svg%3E");
+.logo-mask-full {
+    width: 800px;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeuZenAI%3C/text%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeuZenAI%3C/text%3E%3C/svg%3E");
 }
 
 .logo-sizer {
@@ -209,8 +191,11 @@
 
 @media (max-width: 768px) {
     .footer-container {
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
+        border-top-width: 12px;
+        border-left-width: 12px;
+        border-right-width: 12px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
         margin-top: 40px;
     }
 
@@ -218,16 +203,8 @@
         height: 100px;
     }
 
-    .logo-mask-neu {
-        width: 160px;
-    }
-
-    .logo-mask-zen {
-        width: 140px;
-    }
-
-    .logo-mask-ai {
-        width: 90px;
+    .logo-mask-full {
+        width: 350px;
     }
 
     .logo-sizer,
@@ -241,16 +218,8 @@
         height: 70px;
     }
 
-    .logo-mask-neu {
-        width: 120px;
-    }
-
-    .logo-mask-zen {
-        width: 105px;
-    }
-
-    .logo-mask-ai {
-        width: 70px;
+    .logo-mask-full {
+        width: 280px;
     }
 
     .logo-sizer,

@@ -79,7 +79,7 @@
     }
 
     .logo-mask-full {
-        width: 650px;
+        width: 750px;
     }
 
     .logo-sizer,
@@ -136,9 +136,9 @@
 
 
 .logo-mask-full {
-    width: 800px;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeuZenAI%3C/text%3E%3C/svg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeuZenAI%3C/text%3E%3C/svg%3E");
+    width: 950px;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeuZenAI%3C/text%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 180'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='160' fill='black'%3ENeuZenAI%3C/text%3E%3C/svg%3E");
 }
 
 .logo-sizer {
@@ -204,7 +204,7 @@
     }
 
     .logo-mask-full {
-        width: 350px;
+        width: 450px;
     }
 
     .logo-sizer,
@@ -219,7 +219,7 @@
     }
 
     .logo-mask-full {
-        width: 280px;
+        width: 350px;
     }
 
     .logo-sizer,

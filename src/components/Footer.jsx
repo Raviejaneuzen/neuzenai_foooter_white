@@ -139,7 +139,7 @@ const Footer = () => {
                                         <div className="footer-marker-dot"></div>
                                         {/* Tooltip */}
                                         <div className="footer-tooltip">
-                                            Dallas, USA
+                                            Headquarters: Dallas, USA
                                         </div>
                                     </div>
 
@@ -159,7 +159,8 @@ const Footer = () => {
                                     <div className="footer-location-item">
                                         <div className="footer-location-dot"></div>
                                         <div>
-                                            <h6 className="footer-location-name">Dallas,U.S.A</h6>
+                                            <h6 className="footer-location-name" style={{ color: '#ff4500' }}>Headquarters</h6>
+                                            <h6 className="footer-location-name">Dallas, U.S.A</h6>
                                             <p className="footer-location-address">
                                                 702 S Denton Tap Rd, Suite # 110, Coppell, 75019</p>
                                         </div>

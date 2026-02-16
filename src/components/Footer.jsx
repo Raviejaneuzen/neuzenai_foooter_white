@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Twitter, Linkedin, Github, Mail, Phone, ArrowRight, Facebook, Instagram } from 'lucide-react';
 import footerMap from '../assets/footer_map.png';
@@ -14,23 +14,6 @@ const Footer = () => {
         }
     };
 
-    // Modal State
-    const [showModal, setShowModal] = useState(false);
-    const [modalTitle, setModalTitle] = useState('');
-    const [modalContent, setModalContent] = useState('');
-
-    const openModal = (title, content) => {
-        setModalTitle(title);
-        setModalContent(content);
-        setShowModal(true);
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-    };
-
-    const closeModal = () => {
-        setShowModal(false);
-        document.body.style.overflow = 'unset';
-    };
-
     useEffect(() => {
         const v1 = videoRef1.current;
 
@@ -40,13 +23,6 @@ const Footer = () => {
 
         [v1].forEach(setRate);
     }, []);
-
-    // Close modal and scroll to top on route change
-    useEffect(() => {
-        setShowModal(false);
-        document.body.style.overflow = 'unset';
-        window.scrollTo(0, 0);
-    }, [location]);
 
     return (
         <footer className="footer-container">
@@ -69,6 +45,19 @@ const Footer = () => {
                             <span className="logo-fallback">NeuZenAI</span>
                         </div>
                     </Link>
+                    <div className="footer-powered-by-mask">
+                        <span className="powered-sizer" aria-hidden="true">powered by z-ninth</span>
+                        <video
+                            className="masked-video"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                        >
+                            <source src="/sp-logo-footer-bg.mp4" type="video/mp4" />
+                        </video>
+                    </div>
                 </div>
                 <div className="footer-grid">
                     {/* Brand */}
@@ -102,8 +91,6 @@ const Footer = () => {
                             <li><Link to="/industries" className="footer-link-item" onClick={() => handleLinkClick('/industries')}><ArrowRight size={16} />Industries</Link></li>
                         </ul>
                     </div>
-
-
 
                     {/* Products */}
                     <div className="footer-col-links">
@@ -203,52 +190,14 @@ const Footer = () => {
                         © 2023 NeuZenAI. All rights reserved.
                     </div>
                     <div className="footer-bottom-links">
-                        <button onClick={() => openModal('Privacy Policy', privacyContent)} className="footer-bottom-link-btn">Privacy Policy</button>
-                        <button onClick={() => openModal('Terms of Service', termsContent)} className="footer-bottom-link-btn">Terms & Conditions</button>
-                        <button onClick={() => openModal('Cookie Policy', cookieContent)} className="footer-bottom-link-btn">Cookie Policy</button>
+                        <Link to="/privacy-policy" className="footer-bottom-link-btn" onClick={() => handleLinkClick('/privacy-policy')}>Privacy Policy</Link>
+                        <Link to="/terms-conditions" className="footer-bottom-link-btn" onClick={() => handleLinkClick('/terms-conditions')}>Terms & Conditions</Link>
+                        <Link to="/cookie-policy" className="footer-bottom-link-btn" onClick={() => handleLinkClick('/cookie-policy')}>Cookie Policy</Link>
                     </div>
                 </div>
             </div>
-
-            {/* Modal Implementation */}
-            {showModal && (
-                <div className="policy-modal-overlay" onClick={closeModal}>
-                    <div className="policy-modal-content" onClick={e => e.stopPropagation()}>
-                        <button className="policy-modal-close" onClick={closeModal}>×</button>
-                        <h2 className="policy-modal-title">{modalTitle}</h2>
-                        <div className="policy-modal-body">
-                            {modalContent.split('\n').map((paragraph, idx) => (
-                                <p key={idx} className="mb-4 text-gray-700 leading-relaxed">{paragraph}</p>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            )}
         </footer>
     );
 };
-
-// Content Data
-const privacyContent = `At NeuzenAI, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you visit our website or use our services.
-
-We collect personal information that you voluntarily provide to us when you register on the website, express an interest in obtaining information about us or our products and services, when you participate in activities on the website or otherwise when you contact us. The personal information that we collect depends on the context of your interactions with us and the website, the choices you make and the products and features you use.
-
-We use personal information collected via our website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations. We indicate the specific processing grounds we rely on next to each purpose listed below: to facilitate account creation and logon process, to send you marketing and promotional communications, to send administrative information to you, and to post testimonials.`;
-
-const termsContent = `Welcome to NeuzenAI. These Terms of Service ("Terms") govern your use of our website and services. By accessing or using our website, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our website or services.
-
-All content, trademarks, service marks, logos, and other intellectual property displayed on our website are the property of NeuzenAI or their respective owners. You may not use, reproduce, modify, or distribute any content from our website without our prior written consent.
-
-You agree to use our website and services only for lawful purposes and in accordance with these Terms. You may not use our website in any manner that could damage, disable, overburden, or impair our servers or networks, or interfere with any other party's use and enjoyment of our website.
-
-We reserve the right to modify or terminate our website and services at any time, without notice. We also reserve the right to update these Terms from time to time. Your continued use of our website after any changes to these Terms constitutes your acceptance of such changes.`;
-
-const cookieContent = `Our website uses cookies to enhance your browsing experience and provide personalized content. Cookies are small text files that are stored on your device when you visit a website. They help us analyze website traffic, remember your preferences, and improve site performance.
-
-We use both session cookies (which expire when you close your browser) and persistent cookies (which stay on your device until you delete them). We also use third-party cookies from service providers such as Google Analytics to understand how users interact with our website.
-
-By using our website, you consent to the use of cookies in accordance with this Cookie Policy. You can control and manage cookies through your browser settings. However, please note that disabling cookies may affect the functionality of our website.
-
-If you have any questions about our Cookie Policy, please contact us at contact@neuzenai.com.`;
 
 export default Footer;

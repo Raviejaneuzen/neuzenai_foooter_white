@@ -103,6 +103,7 @@ const Navbar = () => {
         >
           <div className="logo-wrapper">
             <img src="/logo.png" alt="NeuZenAI" className="navbar-logo-img" />
+            <span className="powered-by">powered by z-ninth</span>
           </div>
         </Link>
 

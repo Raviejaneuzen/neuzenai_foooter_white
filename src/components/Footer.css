@@ -115,9 +115,7 @@
     height: 30px;
     width: 950px;
     /* Matched to logo-mask-full width */
-    margin-top: -30px;
-    padding-left: 135px;
-    /* Align with visual start of centered logo text */
+    margin-top: -10px;
 
     /* Mask Properties */
     -webkit-mask-repeat: no-repeat;
@@ -127,8 +125,9 @@
     -webkit-mask-size: contain;
     mask-size: contain;
 
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 30'%3E%3Ctext x='0' y='50%25' text-anchor='start' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='24' letter-spacing='2' text-transform='uppercase' fill='black'%3Epowered by z-ninth%3C/text%3E%3C/svg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 30'%3E%3Ctext x='0' y='50%25' text-anchor='start' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='24' letter-spacing='2' text-transform='uppercase' fill='black'%3Epowered by z-ninth%3C/text%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 30'%3E%3Ctext x='950' y='50%25' text-anchor='end' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='24' letter-spacing='2' text-transform='uppercase' fill='black'%3Epowered by z-ninth%3C/text%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 30'%3E%3Ctext x='950' y='50%25' text-anchor='end' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='24' letter-spacing='2' text-transform='uppercase' fill='black'%3Epowered by z-ninth%3C/text%3E%3C/svg%3E");
+    transform: translateX(100px);
 }
 
 /* ... existing code between ... */
@@ -142,7 +141,7 @@
 
     .footer-powered-by-mask {
         width: 450px !important;
-        padding-left: 40px !important;
+        transform: translateX(0);
     }
 
     /* ... existing code ... */
@@ -157,7 +156,7 @@
 
     .footer-powered-by-mask {
         width: 350px !important;
-        padding-left: 30px !important;
+        transform: translateX(0);
     }
 
     /* ... existing code ... */
@@ -278,7 +277,7 @@
 
     .footer-powered-by-mask {
         width: 450px !important;
-        padding-left: 40px !important;
+        transform: translateX(0);
     }
 
     .logo-sizer,
@@ -298,7 +297,7 @@
 
     .footer-powered-by-mask {
         width: 350px !important;
-        padding-left: 30px !important;
+        transform: translateX(0);
     }
 
     .logo-sizer,

@@ -246,15 +246,15 @@ const Capabilities = () => {
                 </div>
             </section> */}
 
-            {/* Get in Touch Section */}
-            <section className="careers-final-cta">
-                <div className="cta-overlay-gradient"></div>
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                        <h2 className="cta-heading-large text-[#ffffff]">
-                            Know More About Our  <br className="hidden md:block" />Capabilities
+            {/* Services CTA Banner */}
+            <section className="services-cta-banner">
+                <div className="services-cta-overlay"></div>
+                <div className="container mx-auto px-6">
+                    <div className="services-cta-content">
+                        <h2 className="services-cta-title">
+                            Know More About Our <br className="hidden md:block" /> Capabilities
                         </h2>
-                        <Link to="/contact" className="cta-contact-btn">
+                        <Link to="/contact" className="services-cta-button">
                             Contact Us
                         </Link>
                     </div>

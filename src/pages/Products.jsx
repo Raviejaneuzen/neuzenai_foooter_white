@@ -19,10 +19,10 @@ const Products = () => {
         {
             id: 1,
             name: "FluxAI",
-            tagline: "Enterprise Performance Intelligence",
-            description: "A comprehensive business intelligence platform for monitoring performance and marketing efficiency. Real-time KPI tracking, advanced Marketing Mix Modeling (MMM), and AI-driven document analysis provide a unified view of business growth.",
+            tagline: "",
+            description: "Flux AI is an enterprise-grade Marketing Mix Modeling (MMM) and Budget Optimization platform. Our system analyzes your raw data to reveal which channels are truly driving revenue and why. Unlike black box solutions, we provide actionable insights and then generate a precise, optimized budget allocation based on your goals. Know your ROI, prove your impact, and invest every dollar with confidence.",
             icon: <Zap className="w-8 h-8 text-white" />,
-            image: "/",
+            image: "/fluxai.png",
             features: ["Real-time KPI Monitoring", "Marketing Mix Modeling", "GenAI Document Analysis", "Performance Forecasting"],
             link: "https://fluxai.neuzenai.com/login",
             isExternal: true
@@ -31,10 +31,10 @@ const Products = () => {
             id: 2,
             name: "LensAI",
             tagline: "Hire Smarter, Not Harder with LensAI",
-            description: "Streamline your recruitment process with an intelligent talent acquisition platform. Automated resume parsing, seamless interview scheduling, and personalized candidate outreach help teams find and hire top talent faster.",
+            description: "LensAI is the intelligent hiring partner that transforms your recruitment process. Simply connect your talent sources, upload a job description, and our AI gets to work. Instantly receive a ranked list of qualified candidates with full transparency on every match and engage top candidates with one-click outreach. From sourcing to scheduling, LensAI streamlines your entire hiring workflow.",
             icon: <Eye className="w-8 h-8 text-white" />,
-            image: "/lensAI.png",
-            features: ["Intelligent Resume Parsing", "Automated Scheduling", "Candidate Outreach", "Recruitment Analytics"],
+            image: "/lensai.png",
+            features: ["Connect Instantly", "Filter Smartly", "Insights At A Glance", "One-Click OutReach"],
             link: "https://lens.neuzenai.com/",
             isExternal: true
         },
@@ -42,7 +42,7 @@ const Products = () => {
             id: 3,
             name: "NvisionAI",
             tagline: "Computer Vision–Based Automated Product Defect Inspection",
-            description: "Revolutionize vehicle inspections with computer vision and generative AI. Automatically identify vehicle details, detect damage from images, and generate precise cost estimations for repairs and insurance assessments.",
+            description: "Revolutionize your automotive workflow with Nvision AI, the platform for instant damage and cost analysis. Built for the insurance and manufacturing industries, our AI assesses vehicle images to deliver precise defect reports. Instantly generate accurate repair cost estimates, streamlining insurance claims and optimizing quality control. Empower your team with fast, objective data to reduce errors and make smarter business decisions.",
             icon: <Brain className="w-8 h-8 text-white" />,
             image: "/nvisionAI.png",
             features: ["Computer Vision Analysis", "Defects Identification", "Damage Assessment", "Cost Estimation"],
@@ -53,10 +53,10 @@ const Products = () => {
             id: 4,
             name: "SwassAI",
             tagline: "AI-Powered Healthcare That Saves Lives",
-            description: "Advanced healthcare analytics platform specializing in diagnostic precision through medical imaging analysis. Enhances clinical decision-making with automated risk classification and comprehensive generative AI reports for diseases like breast cancer.",
+            description: "SwassAI is intelligent platform built to support healthcare professionals. Securely upload medical images for Tuberculosis or Breast Cancer screening and let our AI provide rapid, precise analysis. In moments, you'll receive a comprehensive report highlighting potential abnormalities with suggested precautionary steps. Review the findings, add your own expert notes, and streamline your workflow to deliver faster, data-driven patient care.",
             icon: <BarChart className="w-8 h-8 text-white" />,
-            image: "/swassAI.png",
-            features: ["AI Diagnostic Precision", "Medical Image Analysis", "Medical-Grade Accuracy", "Automated Diagnostic Reporting"],
+            image: "/swassai.png",
+            features: ["Clinically Validated Insights", "Medical Image Analysis", "Medical-Grade Accuracy", "Automated Diagnostic Reporting"],
             link: "https://swass.neuzenai.com/",
             isExternal: true
         }
@@ -71,7 +71,7 @@ const Products = () => {
                     <div className="products-hero-content-left slide-up-animated">
                         <h1 className="products-hero-love-text">
                             Next-Gen <br></br>AI Products<br />
-                            AI<span className="orange-bar"></span>
+                            <span className="orange-bar"></span>
                         </h1>
                     </div>
                 </div>
@@ -328,6 +328,21 @@ const Products = () => {
                                 <p className="text-gray-600 text-md">Infrastructure designed to scale effortlessly with your growing business demands.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Get in Touch Section */}
+            <section className="careers-final-cta">
+                <div className="cta-overlay-gradient"></div>
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <h2 className="cta-heading-large text-[#ffffff]">
+                            Know More About Our  <br className="hidden md:block" />Products
+                        </h2>
+                        <Link to="/contact" className="cta-contact-btn">
+                            Contact Us
+                        </Link>
                     </div>
                 </div>
             </section>

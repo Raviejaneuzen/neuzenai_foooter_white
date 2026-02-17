@@ -308,7 +308,8 @@ html {
 .products-hero-right {
     flex: 0 0 65%;
     max-width: 65%;
-    background: url('/product-main.png') center/cover no-repeat !important;
+    background: url('/products1.jpg') center/cover no-repeat !important;
+    filter: brightness(0.85);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -324,7 +325,10 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.7)) !important;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.6) 40%,
+            rgba(0, 0, 0, 0.3) 100%) !important;
     z-index: 1;
 }
 
@@ -359,22 +363,26 @@ html {
 }
 
 .products-hero-title-right {
-    font-size: 3.5rem;
+    font-size: 4.8rem;
     font-weight: 800;
     color: #ff4500;
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
     line-height: 1.1;
+    text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.9),
+        0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 .products-hero-subtitle-right {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     color: #ffffff;
-    max-width: 600px;
+    max-width: 700px;
     line-height: 1.6;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
     letter-spacing: normal;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 .about-hero-person-wrapper {
@@ -427,4 +435,82 @@ html {
     object-fit: contain;
     filter: contrast(1.05) brightness(1.02);
     image-rendering: -webkit-optimize-contrast;
+}
+
+/* Final Horizontal CTA - Shared from Careers/Capabilities */
+.careers-final-cta {
+    position: relative;
+    height: 300px;
+    background-image: url('/career1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.cta-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #F05D34E6 0%, #1A294799 100%);
+    z-index: 1;
+}
+
+.cta-heading-large {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+.cta-contact-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.cta-contact-btn:hover {
+    background-color: #ffffff;
+    color: #ff4500;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .cta-heading-large {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-final-cta {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .cta-heading-large {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .cta-contact-btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
 }

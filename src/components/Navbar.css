@@ -64,37 +64,46 @@
 
 .logo-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
   line-height: 1;
-  font-family: 'Nb international pro webfont', Arial, sans-serif;
+  transition: all 0.3s ease;
 }
 
 .navbar-logo-img {
-  height: 28px;
+  height: 32px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.powered-by-wrapper {
+.logo-divider {
+  width: 1.5px;
+  height: 24px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 69, 0, 0.4), transparent);
+  margin: 0 4px;
+}
+
+.powered-by-badge {
   display: flex;
-  align-items: baseline;
-  gap: 4px;
-  margin-top: 0;
-  line-height: 1;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
 }
 
-.powered-small {
-  font-size: 7px;
-  font-weight: 600;
+.powered-label {
+  font-size: 8px;
+  font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  font-family: 'Inter', sans-serif;
+  letter-spacing: 1.5px;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 1px;
 }
 
-.z-ninth-big {
-  font-size: 18px;
+.z-ninth-brand {
+  font-size: 20px;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
@@ -102,25 +111,47 @@
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
 
-  /* Premium Orange Gradient Animation */
-  background: linear-gradient(90deg, #FF4500, #FF7F00, #FFA500, #FF7F00, #FF4500);
+  /* Premium Orange-Gold Gradient */
+  background: linear-gradient(90deg,
+      #FF4500 0%,
+      #FF8C00 25%,
+      #FFA500 50%,
+      #FF8C00 75%,
+      #FF4500 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 
-  animation: orangeFlow 3s linear infinite;
-  filter: drop-shadow(0 0 2px rgba(255, 69, 0, 0.4));
+  animation: shimmerFlow 3s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.2));
+  transition: all 0.3s ease;
 }
 
 .z-letter {
-  display: inline;
-  color: inherit;
-  animation: none;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@keyframes orangeFlow {
+.logo-wrapper:hover .navbar-logo-img {
+  transform: scale(1.05);
+}
+
+.logo-wrapper:hover .z-ninth-brand {
+  filter: drop-shadow(0 0 12px rgba(255, 69, 0, 0.5));
+  letter-spacing: 1px;
+}
+
+.logo-wrapper:hover .z-letter {
+  transform: translateY(-2px);
+}
+
+.logo-wrapper:hover .z-letter:nth-child(odd) {
+  transform: translateY(-3px);
+}
+
+@keyframes shimmerFlow {
   0% {
     background-position: 0% center;
   }
@@ -534,6 +565,28 @@
   .navbar-scroll-bg-default,
   .navbar-scroll-bg-scrolled {
     padding: 10px 20px;
+  }
+
+  .logo-wrapper {
+    gap: 8px;
+  }
+
+  .navbar-logo-img {
+    height: 26px;
+  }
+
+  .logo-divider {
+    height: 20px;
+    margin: 0 2px;
+  }
+
+  .z-ninth-brand {
+    font-size: 16px;
+  }
+
+  .powered-label {
+    font-size: 6px;
+    letter-spacing: 1px;
   }
 }
 

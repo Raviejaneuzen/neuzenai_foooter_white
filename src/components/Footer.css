@@ -111,22 +111,22 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 45px;
-    width: 860px;
-    /* Tighter width for alignment */
+    width: 1700px;
+    /* Extra wide container to prevent clipping */
     margin-top: -10px;
 
     /* Mask Properties */
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: left center;
-    mask-position: left center;
+    -webkit-mask-position: center center;
+    mask-position: center center;
     -webkit-mask-size: contain;
     mask-size: contain;
 
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 860 45'%3E%3Ctext x='10' y='50%25' text-anchor='start' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='32' letter-spacing='2' text-transform='uppercase' fill='black'%3Epowered by z-ninth%3C/text%3E%3C/svg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 860 45'%3E%3Ctext x='10' y='50%25' text-anchor='start' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' font-weight='800' font-size='32' letter-spacing='2' text-transform='uppercase' fill='black'%3Epowered by z-ninth%3C/text%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1700 45'%3E%3Ctext x='1110' y='55%25' text-anchor='start' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' text-transform='uppercase' fill='black'%3E%3Ctspan font-size='14' font-weight='700' letter-spacing='2' dy='-8'%3Epowered by%3C/tspan%3E%3Ctspan font-size='40' font-weight='900' letter-spacing='1' dx='10' dy='10'%3Ez-ninth%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1700 45'%3E%3Ctext x='1110' y='55%25' text-anchor='start' dominant-baseline='middle' font-family='Nb international pro webfont, Arial, sans-serif' text-transform='uppercase' fill='black'%3E%3Ctspan font-size='14' font-weight='700' letter-spacing='2' dy='-8'%3Epowered by%3C/tspan%3E%3Ctspan font-size='40' font-weight='900' letter-spacing='1' dx='10' dy='10'%3Ez-ninth%3C/tspan%3E%3C/text%3E%3C/svg%3E");
 }
 
 /* ... existing code between ... */

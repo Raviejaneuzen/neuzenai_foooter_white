@@ -103,9 +103,10 @@ const Navbar = () => {
         >
           <div className="logo-wrapper">
             <img src="/logo.png" alt="NeuZenAI" className="navbar-logo-img" />
-            <div className="powered-by-wrapper">
-              <span className="powered-small">powered by</span>
-              <span className="z-ninth-big">
+            <div className="logo-divider"></div>
+            <div className="powered-by-badge">
+              <span className="powered-label">powered by</span>
+              <span className="z-ninth-brand">
                 <span className="z-letter">z</span>
                 <span className="z-letter">-</span>
                 <span className="z-letter">n</span>

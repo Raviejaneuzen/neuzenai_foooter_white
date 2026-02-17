@@ -95,67 +95,38 @@
 
 .z-ninth-big {
   font-size: 18px;
-  font-weight: 800;
-  color: #FF4500;
+  font-weight: 900;
+  font-style: italic;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-family: 'Inter', sans-serif;
-  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+
+  /* Premium Orange Gradient Animation */
+  background: linear-gradient(90deg, #FF4500, #FF7F00, #FFA500, #FF7F00, #FF4500);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  animation: orangeFlow 3s linear infinite;
+  filter: drop-shadow(0 0 2px rgba(255, 69, 0, 0.4));
 }
 
 .z-letter {
-  display: inline-block;
-  animation: zNinthColorChange 3s infinite;
+  display: inline;
+  color: inherit;
+  animation: none;
 }
 
-.z-letter:nth-child(1) {
-  animation-delay: 0.0s;
-}
-
-.z-letter:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.z-letter:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.z-letter:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.z-letter:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-.z-letter:nth-child(6) {
-  animation-delay: 1.0s;
-}
-
-.z-letter:nth-child(7) {
-  animation-delay: 1.2s;
-}
-
-@keyframes zNinthColorChange {
+@keyframes orangeFlow {
   0% {
-    color: #FF4500;
-    text-shadow: 0 0 5px rgba(255, 69, 0, 0.2);
-  }
-
-  33% {
-    color: #FFB347;
-    text-shadow: 0 0 8px rgba(255, 179, 71, 0.4);
-  }
-
-  /* Light Orange */
-  66% {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    background-position: 0% center;
   }
 
   100% {
-    color: #FF4500;
-    text-shadow: 0 0 5px rgba(255, 69, 0, 0.2);
+    background-position: 200% center;
   }
 }
 

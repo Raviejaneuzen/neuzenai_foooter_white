@@ -64,74 +64,55 @@
 
 .logo-wrapper {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0px;
   line-height: 1;
   transition: all 0.3s ease;
+  margin-top: -4px;
 }
 
 .navbar-logo-img {
-  height: 32px;
+  height: 28px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-.logo-divider {
-  width: 1.5px;
-  height: 24px;
-  background: linear-gradient(to bottom, transparent, rgba(255, 69, 0, 0.4), transparent);
-  margin: 0 4px;
-}
 
 .powered-by-badge {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.1;
+  justify-content: flex-end;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.powered-text-container {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
 }
 
 .powered-label {
   font-size: 8px;
   font-weight: 700;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.8px;
   font-family: 'Outfit', sans-serif;
-  margin-bottom: 1px;
+  transform: translateY(-2px);
 }
 
 .z-ninth-brand {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   font-family: 'Montserrat', sans-serif;
-  display: inline-block;
-
-  /* Premium Orange-Gold Gradient */
-  background: linear-gradient(90deg,
-      #FF4500 0%,
-      #FF8C00 25%,
-      #FFA500 50%,
-      #FF8C00 75%,
-      #FF4500 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  animation: shimmerFlow 3s linear infinite;
-  filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.2));
+  color: #ff4500;
+  filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.3));
   transition: all 0.3s ease;
-}
-
-.z-letter {
-  display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .logo-wrapper:hover .navbar-logo-img {
@@ -140,87 +121,9 @@
 
 .logo-wrapper:hover .z-ninth-brand {
   filter: drop-shadow(0 0 12px rgba(255, 69, 0, 0.5));
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
-.logo-wrapper:hover .z-letter {
-  transform: translateY(-2px);
-}
-
-.logo-wrapper:hover .z-letter:nth-child(odd) {
-  transform: translateY(-3px);
-}
-
-@keyframes shimmerFlow {
-  0% {
-    background-position: 0% center;
-  }
-
-  100% {
-    background-position: 200% center;
-  }
-}
-
-/* Removed old text logo styles as they are replaced by image */
-
-/* Logo wave animation removed */
-/*
-.logo-waves {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  transform: translateY(-30%);
-}
-
-.logo-waves svg {
-  width: 100%;
-  height: 100%;
-}
-
-.logo-wave-path-1 {
-  fill: none;
-  stroke: #FF4500;
-  stroke-width: 1;
-  stroke-opacity: 0.6;
-  stroke-dasharray: 400;
-  animation: waveFlow 4s linear infinite;
-}
-
-.logo-wave-path-2 {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 1;
-  stroke-opacity: 0.4;
-  stroke-dasharray: 400;
-  animation: waveFlow 4s linear infinite reverse;
-}
-
-.logo-flare {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, #FF4500 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(2px);
-  animation: glowPulse 2s ease-in-out infinite;
-}
-
-@keyframes waveFlow {
-  0% {
-    stroke-dashoffset: 400;
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-*/
 
 @keyframes glowPulse {
 
@@ -235,6 +138,7 @@
     transform: scale(1.5);
   }
 }
+
 
 .navbar-scroll-menu {
   display: none;
@@ -568,20 +472,15 @@
   }
 
   .logo-wrapper {
-    gap: 8px;
+    gap: 0px;
   }
 
   .navbar-logo-img {
-    height: 26px;
-  }
-
-  .logo-divider {
-    height: 20px;
-    margin: 0 2px;
+    height: 22px;
   }
 
   .z-ninth-brand {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .powered-label {

@@ -218,6 +218,47 @@ html {
     animation: arrowBounce 1s infinite ease-in-out;
 }
 
+.explore-product-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 32px;
+    background: #ff4500;
+    color: white !important;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px -5px rgba(255, 69, 0, 0.3);
+    border: none;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.explore-product-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px -8px rgba(255, 69, 0, 0.5);
+    background: #e63e00;
+}
+
+.explore-product-btn .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.explore-product-btn:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+.explore-product-btn.green {
+    background: #16a34a;
+    box-shadow: 0 10px 20px -5px rgba(22, 163, 74, 0.3);
+}
+
+.explore-product-btn.green:hover {
+    background: #15803d;
+    box-shadow: 0 15px 30px -8px rgba(22, 163, 74, 0.5);
+}
+
 @keyframes arrowBounce {
 
     0%,
@@ -456,7 +497,7 @@ html {
 
 /* V3 Product Detail Enhancements */
 .capability-card-v3 {
-    background: #f8fafc;
+    background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 1rem;
     padding: 1rem 1.25rem;
@@ -479,6 +520,23 @@ html {
     border-radius: 0.75rem;
     padding: 1.25rem 1.5rem;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.target-audience-banner.green {
+    background: linear-gradient(to right, #f0fdf4, #ffffff);
+    border-left-color: #16a34a;
+}
+
+.target-audience-banner.green .target-icon-box {
+    box-shadow: 0 2px 4px rgba(22, 163, 74, 0.1);
+}
+
+.target-audience-banner.green .text-color-target {
+    color: #16a34a !important;
+}
+
+.target-audience-banner.orange .text-color-target {
+    color: #ff4500 !important;
 }
 
 .target-icon-box {

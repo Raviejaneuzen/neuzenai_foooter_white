@@ -163,13 +163,13 @@ const Products = () => {
                                                         initial={{ opacity: 0, y: 20 }}
                                                         whileInView={{ opacity: 1, y: 0 }}
                                                         transition={{ duration: 0.5, delay: 0.5 }}
-                                                        className="target-audience-banner mt-8"
+                                                        className="target-audience-banner green mt-8"
                                                     >
                                                         <div className="target-icon-box">
-                                                            <Users size={18} className="text-[#ff4500]" />
+                                                            <Users size={18} className="text-[#16a34a]" />
                                                         </div>
                                                         <div>
-                                                            <p className="text-[11px] uppercase tracking-widest font-bold text-[#ff4500] mb-1">Who it's for</p>
+                                                            <p className="text-[11px] uppercase tracking-widest font-bold text-[#16a34a] mb-1 text-color-target">Who it's for</p>
                                                             <p className="text-gray-700 text-sm font-medium leading-relaxed">{product.whoItIsFor}</p>
                                                         </div>
                                                     </motion.div>
@@ -186,15 +186,15 @@ const Products = () => {
                                                             href={product.link}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="link-glow inline-flex items-center text-[#ff4500] font-bold text-lg transition-all group hover:gap-3"
+                                                            className="explore-product-btn"
                                                         >
-                                                            <span className="text-black">Learn more about {product.name.replace('AI', '')}<span style={{ color: '#ff4500' }}>AI</span></span>
-                                                            <ArrowRight className="arrow-animate ml-2 w-5 h-5 transition-transform" />
+                                                            <span>Explore More</span>
+                                                            <ArrowRight className="arrow-icon w-5 h-5" />
                                                         </a>
                                                     ) : (
-                                                        <Link to={product.link} className="link-glow inline-flex items-center text-[#ff4500] font-bold text-lg transition-all group hover:gap-3">
-                                                            <span className="text-black">Learn more about {product.name.replace('AI', '')}<span style={{ color: '#ff4500' }}>AI</span></span>
-                                                            <ArrowRight className="arrow-animate ml-2 w-5 h-5 transition-transform" />
+                                                        <Link to={product.link} className="explore-product-btn">
+                                                            <span>Explore More</span>
+                                                            <ArrowRight className="arrow-icon w-5 h-5" />
                                                         </Link>
                                                     )}
                                                 </motion.div>
@@ -234,7 +234,7 @@ const Products = () => {
                                                             whileInView={{ opacity: 1, y: 0 }}
                                                             transition={{ duration: 0.5, delay: 0.3 }}
                                                         >
-                                                            <h4 className="text-lg font-bold mb-5 flex items-center gap-2" style={{ color: '#000000' }}>
+                                                            <h4 className="text-lg font-bold mb-5 flex items-center gap-2" style={{ color: '#ff4500' }}>
                                                                 <Sparkle size={20} className="text-[#ff4500]" />
                                                                 Key Capabilities
                                                             </h4>
@@ -290,8 +290,8 @@ const Products = () => {
                                                                 whileInView={{ opacity: 1, y: 0 }}
                                                                 transition={{ duration: 0.5, delay: 0.3 }}
                                                             >
-                                                                <h4 className="text-lg font-bold mb-5 flex items-center gap-2" style={{ color: '#000000' }}>
-                                                                    <Sparkle size={20} className="text-[#ff4500]" />
+                                                                <h4 className="text-lg font-bold mb-5 flex items-center gap-2" style={{ color: '#16a34a' }}>
+                                                                    <Sparkle size={20} className="text-[#16a34a]" />
                                                                     Key Capabilities
                                                                 </h4>
                                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -328,13 +328,13 @@ const Products = () => {
                                                         initial={{ opacity: 0, y: 20 }}
                                                         whileInView={{ opacity: 1, y: 0 }}
                                                         transition={{ duration: 0.5, delay: 0.5 }}
-                                                        className="target-audience-banner mt-8"
+                                                        className="target-audience-banner orange mt-8"
                                                     >
                                                         <div className="target-icon-box">
                                                             <Users size={18} className="text-[#ff4500]" />
                                                         </div>
                                                         <div>
-                                                            <p className="text-[11px] uppercase tracking-widest font-bold text-[#ff4500] mb-1">Who it's for</p>
+                                                            <p className="text-[11px] uppercase tracking-widest font-bold text-[#ff4500] mb-1 text-color-target">Who it's for</p>
                                                             <p className="text-gray-700 text-sm font-medium leading-relaxed">{product.whoItIsFor}</p>
                                                         </div>
                                                     </motion.div>
@@ -351,15 +351,15 @@ const Products = () => {
                                                             href={product.link}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="link-glow inline-flex items-center text-[#ff4500] font-bold text-lg transition-all group hover:gap-3"
+                                                            className="explore-product-btn green"
                                                         >
-                                                            <span className="text-black">Learn more about {product.name.replace('AI', '')}<span style={{ color: '#ff4500' }}>AI</span></span>
-                                                            <ArrowRight className="arrow-animate ml-2 w-5 h-5 transition-transform" />
+                                                            <span>Explore More</span>
+                                                            <ArrowRight className="arrow-icon w-5 h-5" />
                                                         </a>
                                                     ) : (
-                                                        <Link to={product.link} className="link-glow inline-flex items-center text-[#ff4500] font-bold text-lg transition-all group hover:gap-3">
-                                                            <span className="text-black">Learn more about {product.name.replace('AI', '')}<span style={{ color: '#ff4500' }}>AI</span></span>
-                                                            <ArrowRight className="arrow-animate ml-2 w-5 h-5 transition-transform" />
+                                                        <Link to={product.link} className="explore-product-btn green">
+                                                            <span>Explore More</span>
+                                                            <ArrowRight className="arrow-icon w-5 h-5" />
                                                         </Link>
                                                     )}
                                                 </motion.div>
@@ -380,7 +380,7 @@ const Products = () => {
                 <div className="absolute inset-0 opacity-40" style={{ backgroundImage: 'radial-gradient(#ff4500 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }}></div>
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold" style={{ color: '#ff4500' }}>Why Choose NeuZen?</h2>
+                        <h2 className="text-4xl font-bold" style={{ color: '#ff4500' }}>Why Choose NeuZenAI?</h2>
                     </div>
                     <br></br>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
